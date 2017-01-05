@@ -1,0 +1,42 @@
+The code for ConvexPolygon code was hastily done last minute when Professor
+Piyush made the comment in class that it had to be pure python, and that the
+assumption was that there would be no error checking involved for the data input
+when creating an object of ConvexPolygon.
+The code itself is mostly a rehashing of someone else's work. That person is
+Charles Marsh, and it was "paraphrased" from his repository on github:
+
+https://github.com/crm416/point-location
+
+Most of the work went into how to format it accordingly to meet the criteria
+specified for the homework and making it pep8 compliant, create a test case to
+reach full coverage, and achieve a 10.0/10.0 in pylint.
+
+I also utilized the even-odd rule algorithm to locate whether an objec was
+located along the boundaries of the polygon, of which was repurposed from the
+wikipedia page for the algorithm. Ironically, it was not my intention but I
+couldn't unsee it. 
+
+https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule
+
+The only shortcoming arising from the behavior of pylint with disabling certain
+warnings in both my original implementation of ConvexPolygon(below) done
+matplotlib.
+________________________________________________________________________________
+Makefile has the commands to call on the necessary testing:
+1. pep8_res = for pep8 standard check
+2. pylint_point = self explanatory
+3. pylint_convex = self explanatory
+4. coverage = coverage only testing point.py and convex_polygon.py
+________________________________________________________________________________
+This homework was written with the utilization of modules from the package
+"matplotlib". More specifically "mlab" for its method "inside_poly" and, "path"
+for its contained class "Path" and its method "contains_point".
+
+I specifically included the following disabled messages from pylint:
+1. R0903 = "Too Few Methods," in point.py and mpl_convex_polygon.py
+2. I0011 = "Locally disabling method %r," in mpl_convex_polygon.py
+3. W0201 = "Attribute %r defined outside __init__", in mpl_convex_polygon.py
+4. W0612 = "Unused-variable," in mpl_convex_polygon.py
+
+The statements causing these errors are mentioned in the comments at the
+beginning of convex_polygon.py.
