@@ -2,7 +2,7 @@
 Redo of convex polygon class not using matplotlib
 
 The code was originally written by Charles Marsh:
-Repo it was found in: https://github.com/crm416/point-location
+Repo it was found in and re implemented from: https://github.com/crm416/point-location
 Also:
 https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule
 """
